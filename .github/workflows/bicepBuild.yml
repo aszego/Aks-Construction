@@ -130,4 +130,9 @@ jobs:
           else {
             write-output "ghpr.html not found, no pr comment required"
           }
-
+          
+      - name: Upload compiled files
+        uses: actions/upload-artifact@v2.3.1
+        with:
+          name: Compiled Bicep files
+          path: bicep/compiled
